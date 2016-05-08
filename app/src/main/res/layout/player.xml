@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="14sp"
+        android:textColor="#616161"
+        android:text="Player A"
+        android:id="@+id/team"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="56sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        />
+    <Button
+        android:onClick="plusThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+3 points"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        />
+    <Button
+        android:onClick="plusTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+2 points"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="free throw"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:onClick="freeThrow"
+        />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="team"  type="id"></item>
+    <item name="teamAData"  type="id"></item>
+    <item name="teamBData"  type="id"></item>
+</resources>
