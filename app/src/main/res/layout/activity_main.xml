@@ -1,55 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.courtcounter.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fillViewport="true"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-   >
+    tools:context="com.example.android.courtcounter.MainActivity">
 
     <LinearLayout
-        android:id="@+id/court"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <include layout="@layout/player"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:id="@+id/teamA"
-            />
-        <View
-            android:background="@android:color/darker_gray"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"/>
-        <include layout="@layout/player"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:id="@+id/teamB"
-            />
+        <include
+            android:id="@+id/app_bar"
 
+
+            layout="@layout/app_bar" />
+
+        <LinearLayout
+            android:id="@+id/court"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/teamA"
+                layout="@layout/player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <include
+                android:id="@+id/teamB"
+                layout="@layout/player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="Reset"
+                android:text="reset" />
+        </RelativeLayout>
     </LinearLayout>
-
-    <RelativeLayout
-        android:layout_marginBottom="32dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:onClick="Reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="reset"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-                       />
-    </RelativeLayout>
-</LinearLayout>
 </ScrollView>
